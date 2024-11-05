@@ -15,7 +15,7 @@ const ResumeSection = () => {
         {/* Image of the resume */}
         <div className="mb-5" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <img
-            src="/resume-image.jpg" // Adjust this to the actual name of your image
+            src="/resumepic.png" // Adjust this to the actual name of your image
             alt="Resume Preview"
             style={{
               width: '100%',
