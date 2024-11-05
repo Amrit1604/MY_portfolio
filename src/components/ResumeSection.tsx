@@ -12,15 +12,19 @@ const ResumeSection = () => {
           Download my resume to learn more about my education, experience, and skills.
         </p>
 
-        {/* Optional: Embed the resume or provide a preview here */}
-        <div className="mb-5">
-          <iframe
-            src="/resumepic.png"
-            title="Resume Preview"
-            style={{ width: '100%', height: '500px', border: 'none' }} // Adjust height as necessary
-          ></iframe>
-          {/* Or use an image if you have a screenshot of your resume */}
-          {/* <img src="/path-to-your-resume-image.jpg" alt="Resume Preview" className="w-full h-auto mb-5" /> */}
+        {/* Image of the resume */}
+        <div className="mb-5" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <img
+            src="/resume-image.jpg" // Adjust this to the actual name of your image
+            alt="Resume Preview"
+            style={{
+              width: '100%',
+              maxWidth: '600px',
+              height: 'auto',
+              borderRadius: '10px',
+              boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)',
+            }}
+          />
         </div>
 
         <a
