@@ -87,7 +87,18 @@ const ProjectsSection = () => {
   );
 };
 
-const Project = ({ project }) => {
+// Correcting typing for `project` prop in Project component
+interface ProjectProps {
+  project: {
+    name: string;
+    skills: string[];
+    image: string;  // Make sure it's a string for image path
+    transition_delay: number;
+    link: string;
+  };
+}
+
+const Project: React.FC<ProjectProps> = ({ project }) => {
   if (!project) {
     return null; // Prevents rendering if the project data is not available
   }
@@ -110,5 +121,6 @@ const Project = ({ project }) => {
     </div>
   );
 };
+
 
 export default ProjectsSection;

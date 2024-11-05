@@ -8,8 +8,6 @@ interface Project {
   skills: string[];
   image: any;
   transition_delay: number;
-  link: string; // Added link property for the view project button
-  codeLink: string; // Added code link property for the view code button
 }
 
 interface Props {
@@ -18,7 +16,7 @@ interface Props {
 
 const Project: React.FC<Props> = ({ project }) => {
   const controls = useAnimation();
-  const ref = useRef<HTMLDivElement | null>(null);
+  const ref = useRef(null);
   const isInView = useInView(ref);
 
   useEffect(() => {
@@ -29,8 +27,8 @@ const Project: React.FC<Props> = ({ project }) => {
 
   const buttons = (
     <>
-      <Button text="View Project" classes="block" onClick={() => window.open(project.link, "_blank")} />
-      <Button text="View Code" onClick={() => window.open(project.codeLink, "_blank")} />
+      <Button text="View Project" classes="block" />
+      <Button text="View Code" />
     </>
   );
 
@@ -50,7 +48,7 @@ const Project: React.FC<Props> = ({ project }) => {
           className="w-full"
           src={project.image}
           placeholder="blur"
-          alt={project.name} // Updated alt text for better accessibility
+          alt="Project1 Image"
         />
         <div className="hidden cursor-pointer absolute top-0 left-0 bottom-0 right-0 w-full h-full hover:bg-[#000000b8] transition-all hover:transition-all lg:flex justify-center items-center opacity-0 hover:opacity-100">
           <div className="flex flex-col justify-center items-center w-full gap-y-12">

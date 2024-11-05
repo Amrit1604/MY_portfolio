@@ -48,6 +48,7 @@ const ContactSection = () => {
       const result = await response.json();
       if (result.success) {
         setStatusMessage("Your message has been sent successfully!");
+        setFormData({ name: "", email: "", message: "" });  // Clear form on success
       } else {
         setStatusMessage("There was an error sending your message.");
       }
@@ -74,7 +75,7 @@ const ContactSection = () => {
             </h1>
             <p className="text-base md:text-lg mb-5">
               I would love to hear about your project and how I could help. 
-              Feel free to reach out directly or fill in the form, and I'll get 
+              Feel free to reach out directly or fill in the form, and i will get 
               back to you as soon as possible.
             </p>
             {/* Contact Details */}
@@ -120,9 +121,9 @@ const ContactSection = () => {
               ></textarea>
             </div>
             <div className="flex justify-end">
-              <Button text={isSubmitting ? "Sending..." : "Send Message"} disabled={isSubmitting} />
+              <Button text={isSubmitting ? "Sending..." : "Send Message"}  />
             </div>
-            {statusMessage && <p className="text-center mt-4 text-sm text-[#FFD700]">{statusMessage}</p>}
+            {statusMessage && <p className="text-center mt-4 text-sm text-[#FFD700]" aria-live="polite">{statusMessage}</p>}
           </form>
         </div>
         <Footer />
