@@ -70,9 +70,15 @@ const SkillsSection = () => {
     },
   ];
 
-  const renderSkills = (skills) => (
+  type Skill = {
+    name: string;
+    experience: string;
+    transition_delay: number;
+  };
+
+  const renderSkills = (skills: Skill[]) => (
     <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-y-12 md:gap-y-[70px] gap-x-10 my-[60px]">
-      {skills.map((skill, idx) => (
+  {skills.map((skill: Skill, idx: number) => (
         <motion.div
           key={idx}
           className="justify-self-center md:justify-self-start text-center md:text-left bg-gray-900 text-white shadow-lg rounded-2xl p-8 border border-gray-700 hover:border-indigo-400 hover:shadow-indigo-500/40 transition duration-300"

@@ -1,4 +1,6 @@
+
 import React from "react";
+import Image from "next/image";
 
 
 import Button from "components/Button"; // Assuming you have a Button component
@@ -140,7 +142,16 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
 
   return (
     <div className="relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
-      <img src={project.image} alt={project.name} className="w-full h-auto" />
+      <Image
+        src={project.image}
+        alt={project.name}
+        className="w-full h-auto"
+        width={600}
+        height={400}
+        layout="responsive"
+        objectFit="cover"
+        priority={true}
+      />
       <div className="p-4 bg-[#242424] text-white">
         <h3 className="text-xl font-bold">{project.name}</h3>
         <p className="text-sm">{project.skills.join(", ")}</p>
