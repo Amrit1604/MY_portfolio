@@ -12,64 +12,99 @@ const ProjectsSection = () => {
     link: string; // Added link property
   }
 
-  const projects: Project[] = [
-    {
-      name: "THE-NINE-TAILS-KITCHEN",
-      skills: ["HTML", "CSS", "JAVASCRIPT"],
-      image: "/images/ninetails.png", // Directly use the path from the public folder
-      transition_delay: 0.1,
-      link: "https://amrit1604.github.io/THE-NINE-TAILS-KITCHEN/",
-    },
-    {
-      name: "REAL ESTATE WEBSITE WITH BIDDING",
-      skills: ["HTML", "CSS", "JAVASCRIPT"],
-      image: "/images/real.png", // Directly use the path from the public folder
-      transition_delay: 0.2,
-      link: "https://amrit1604.github.io/REAL_ESTATES-/", // Replace with actual link
-    },
-    {
-      name: "TASKMASTER APP",
-      skills: ["HTML", "CSS", "JAVASCRIPT"],
-      image: "/images/taskmaster.png", // Directly use the path from the public folder
-      transition_delay: 0.3,
-      link: "https://amrit1604.github.io/admin_employee/", // Replace with actual link
-    },
-    {
-      name: "TIC-TAC-TOE",
-      skills: ["REACTJS"],
-      image: "/images/tic.png", // Directly use the path from the public folder
-      transition_delay: 0.4,
-      link: "https://amrit1604.github.io/tic-tac-toe/", // Replace with actual link
-    },
-    {
-      name: "NUM GUESS GAME",
-      skills: ["HTML", "CSS", "JAVASCRIPT"],
-      image: "/images/num.png", // Directly use the path from the public folder
-      transition_delay: 0.5,
-      link: "https://amrit1604.github.io/numguess_game_2310991604/", // Replace with actual link
-    },
-    {
-      name: "DISCUSSION PORTAL",
-      skills: ["HTML", "CSS", "JAVASCRIPT"],
-      image: "/images/diss.png", // Directly use the path from the public folder
-      transition_delay: 0.6,
-      link: "https://amrit1604.github.io/discussionapp_2310991604/", // Replace with actual link
-    },
-    {
-      name: "CHAT BOT",
-      skills: ["HTML", "CSS", "JAVASCRIPT", "APIs"],
-      image: "/images/chatbot.png", // Directly use the path from the public folder
-      transition_delay: 0.6,
-      link: "https://amrit1604.github.io/CHAT_BOT/", // Replace with actual link
-    },
-    {
-      name: "CAFFE SHOP",
-      skills: ["HTML", "CSS", "JAVASCRIPT"],
-      image: "/images/caffe.png", // Directly use the path from the public folder
-      transition_delay: 0.6,
-      link: "https://amrit1604.github.io/caffeshop_2310991604/", // Replace with actual link
-    },
-  ];
+  const projects = [
+  {
+    name: "THE-NINE-TAILS-KITCHEN",
+    skills: ["HTML", "CSS", "JAVASCRIPT"],
+    image: "/images/ninetails.png",
+    transition_delay: 0.1,
+    link: "https://amrit1604.github.io/THE-NINE-TAILS-KITCHEN/",
+  },
+  {
+    name: "REAL ESTATE WEBSITE WITH BIDDING",
+    skills: ["HTML", "CSS", "JAVASCRIPT"],
+    image: "/images/real.png",
+    transition_delay: 0.2,
+    link: "https://amrit1604.github.io/REAL_ESTATES-/",
+  },
+  {
+    name: "CHAT BOT",
+    skills: ["HTML", "CSS", "JAVASCRIPT", "APIs"],
+    image: "/images/chatbot.png",
+    transition_delay: 0.3,
+    link: "https://amrit1604.github.io/CHAT_BOT/",
+  },
+  {
+    name: "PotionMaster2.0",
+    skills: ["ReactJS", "HTML", "CSS", "JAVASCRIPT"],
+    image: "/images/potionmaster2.png", // UPDATE with actual image path if different
+    transition_delay: 0.4,
+    link: "https://github.com/Amrit1604/PotionMaster2.0", // Replace with live link if available
+  },
+  {
+    name: "DocATHome",
+    skills: ["ReactJS", "NodeJS", "Express", "MongoDB"],
+    image: "/images/docathome.png", // UPDATE with actual image path if different
+    transition_delay: 0.5,
+    link: "https://github.com/Amrit1604/DocATHome", // Replace with live link if available
+  },
+  {
+    name: "NUM GUESS GAME",
+    skills: ["HTML", "CSS", "JAVASCRIPT"],
+    image: "/images/num.png",
+    transition_delay: 0.6,
+    link: "https://amrit1604.github.io/numguess_game_2310991604/",
+  },
+  {
+    name: "DISCUSSION PORTAL",
+    skills: ["HTML", "CSS", "JAVASCRIPT"],
+    image: "/images/diss.png",
+    transition_delay: 0.7,
+    link: "https://amrit1604.github.io/discussionapp_2310991604/",
+  },
+  {
+    name: "Guess Game",
+    skills: ["HTML", "CSS", "JAVASCRIPT"],
+    image: "/images/guessgame.png", // UPDATE with actual image path if different
+    transition_delay: 0.8,
+    link: "https://github.com/Amrit1604/guess-game", // Replace with live link if available
+  },
+  {
+    name: "CHAT-APP",
+    skills: ["ReactJS", "NodeJS", "Socket.io"],
+    image: "/images/chatapp.png", // UPDATE with actual image path if different
+    transition_delay: 0.9,
+    link: "https://github.com/Amrit1604/CHAT-APP", // Replace with live link if available
+  },
+  {
+    name: "Loginator-3000",
+    skills: ["ReactJS", "NodeJS", "Express"],
+    image: "/images/loginator.png", // UPDATE with actual image path if different
+    transition_delay: 1.0,
+    link: "https://github.com/Amrit1604/Loginator-3000", // Replace with live link if available
+  },
+  {
+    name: "TechZen2.0",
+    skills: ["ReactJS", "NodeJS", "MongoDB"],
+    image: "/images/techzen2.png", // UPDATE with actual image path if different
+    transition_delay: 1.1,
+    link: "https://github.com/Amrit1604/TechZen2.0", // Replace with live link if available
+  },
+  {
+    name: "InsureInfo2",
+    skills: ["ReactJS", "NodeJS", "Express", "MongoDB"],
+    image: "/images/insureinfo2.png", // UPDATE with actual image path if different
+    transition_delay: 1.2,
+    link: "https://github.com/Amrit1604/InsureInfo2", // Replace with live link if available
+  },
+  {
+    name: "Shopping_cart",
+    skills: ["HTML", "CSS", "JAVASCRIPT"],
+    image: "/images/shoppingcart.png", // UPDATE with actual image path if different
+    transition_delay: 1.3,
+    link: "https://github.com/Amrit1604/Shopping_cart", // Replace with live link if available
+  },
+];
 
   return (
     <div className="py-[70px] lg:py-[110px] px-4 md:px-[30px] min-[1139px]:px-0 lg:max-w-[1110px] lg:mx-auto">
