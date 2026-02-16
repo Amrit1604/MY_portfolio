@@ -2,13 +2,13 @@ import { useScreenSize } from "utils/useWindowDimensions";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
+const roles = ["Full-Stack Developer", "AI Enthusiast", "Problem Solver", "Tech Innovator"];
+
 const HeroText = () => {
   const [isMobile, isTab, isDesktop] = useScreenSize();
   const [displayedRole, setDisplayedRole] = useState("");
   const [roleIndex, setRoleIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-
-  const roles = ["Full-Stack Developer", "AI Enthusiast", "Problem Solver", "Tech Innovator"];
 
   useEffect(() => {
     const currentRole = roles[roleIndex];
@@ -53,7 +53,7 @@ const HeroText = () => {
       >
         <span className="block text-white">Nice to meet you!</span>
         <span className="block mt-2">
-          I'm{" "}
+          I&apos;m{" "}
           <span className="gradient-text-apple">
             AMRIT JOSHI
           </span>

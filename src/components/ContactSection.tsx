@@ -71,10 +71,10 @@ const ContactSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-            <span className="gradient-text-apple">Let's Connect</span>
+            <span className="gradient-text-apple">Let&apos;s Connect</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto font-light">
-            Have a project in mind? Let's create something amazing together
+            Have a project in mind? Let&apos;s create something amazing together
           </p>
         </motion.div>
 
