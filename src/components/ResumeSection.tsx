@@ -1,55 +1,51 @@
-// components/ResumeSection.jsx
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { motion } from "framer-motion";
 
 const ResumeSection = () => {
-  const [show, setShow] = useState(false);
-
-  useEffect(() => {
-    // Set a timeout to trigger the drop animation after the component mounts
-    const timer = setTimeout(() => {
-      setShow(true);
-    }, 100); // Adjust the delay as needed
-
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
-    <div className="bg-[#242424] py-[60px] lg:py-[84px] px-4 md:px-[30px] min-[1139px]:px-0">
-      <div className="lg:max-w-[1110px] lg:mx-auto text-center">
-        <h2 className="text-[40px] md:text-5xl lg:text-[88px] font-bold mb-5 md:mb-6 lg:mb-9 text-[#FFD700]">
-          Resume
+    <div className="px-4 md:px-8 lg:px-16 py-20 lg:py-32 lg:max-w-[1400px] lg:mx-auto" id="resume">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.8 }}
+        className="text-center mb-16"
+      >
+        <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
+          <span className="gradient-text-apple">Resume</span>
         </h2>
-        <p className="text-base md:text-lg mb-5 text-gray-300">
-          Download my resume to learn more about my education, experience, and skills.
+        <p className="text-xl text-gray-400 max-w-2xl mx-auto font-light mb-12">
+          Download my resume to explore my education, experience, and technical expertise
         </p>
 
-        {/* Image of the resume with animation */}
-        <div className="mb-5" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <img
-            src="/resumepic.png" // Replace with the actual path to your resume image
-            alt="Resume Preview"
-            style={{
-              width: '100%',
-              maxWidth: '600px',
-              height: 'auto',
-              borderRadius: '10px',
-              boxShadow: show ? '0 0 20px rgba(255, 215, 0, 0.8)' : 'none', // Glowing shadow
-              transition: 'box-shadow 0.3s ease', // Smooth transition for shadow
-              transform: show ? 'translateY(0)' : 'translateY(-20px)', // Drop animation
-              opacity: show ? 1 : 0, // Fade-in effect
-            }}
-          />
-        </div>
-
-        <a
-          href="/amritresume.pdf"  // Path to your resume in the public directory
-          download="amritresume.pdf"
-          className="inline-flex items-center bg-[#FFD700] text-black font-semibold py-3 px-6 rounded-lg hover:bg-[#e6c200] transition-colors"
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          className="max-w-2xl mx-auto glass rounded-3xl p-8 shadow-apple-lg hover:shadow-apple-lg hover-lift transition-apple"
         >
-          <span className="mr-2">📄</span>
-          Download Resume
-        </a>
-      </div>
+          <div className="relative mb-8 rounded-2xl overflow-hidden">
+            <img
+              src="/resumepic.png"
+              alt="Resume Preview"
+              className="w-full h-auto rounded-2xl"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
+          </div>
+
+          <a
+            href="/amritresume.pdf"
+            download="Amrit_Joshi_Resume.pdf"
+            className="group inline-flex items-center gap-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-full hover:shadow-apple-lg transition-apple"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            <span>Download Resume</span>
+          </a>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };
